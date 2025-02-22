@@ -5,8 +5,8 @@ function HomePage() {
     <div className={styles.container}>
       <div className={styles.imageSection}></div>
       <div className={styles.colorSection}>
-        <p>See our products</p>
-        <h1>A cup as unique as your taste</h1>
+        <h1 className={styles.motto}>A cup as unique as your taste</h1>
+        <p className={styles.link}>See our products</p>
       </div>
     </div>
   );

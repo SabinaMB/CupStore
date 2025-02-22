@@ -16,22 +16,29 @@
   flex: 1;
   background-color: var(--color-primary);
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  /* align-items: center;
+  justify-content: center; */
 }
 
-.textOverlay {
+.motto {
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 55%;
+  /* left: 43%; */
+  right: 50%;
   color: #fff;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
 }
 
 .link {
   font-size: 1.2rem;
   color: #8b4513;
   text-decoration: none;
+  position: absolute;
+  bottom: 45%;
+  right: 50%;
 }
 
 .link:hover {
