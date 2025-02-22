@@ -1,7 +1,9 @@
-import "./App.css";
+import "./App.module.css";
+
+import HomePage from "./HomePage/HomePage";
 
 function App() {
-  return <>I´ll be a CupStore</>;
+  return <HomePage />;
 }
 
 export default App;

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--color-primary);
+}
+
+.imageSection {
+  flex: 1;
+  background: url("../assets/landingPage.png");
+  background-size: cover;
+  background-position: left center;
+  position: relative;
+}
+
+.colorSection {
+  flex: 1;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.link {
+  font-size: 1.2rem;
+  color: #8b4513;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
