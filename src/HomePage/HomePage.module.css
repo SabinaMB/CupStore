@@ -5,19 +5,14 @@
 }
 
 .imageSection {
-  flex: 1;
-  background: url("../assets/landingPage.png");
-  background-size: cover;
-  background-position: left center;
-  position: relative;
+  height: 100vh;
+  width: auto;
 }
 
-.colorSection {
-  flex: 1;
-  background-color: var(--color-primary);
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.imageSection img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 }
 
 .motto {
@@ -26,7 +21,7 @@
   font-family: var(--font-headings);
   font-size: 2rem;
   letter-spacing: 0.05rem;
-  right: 50%;
+  right: 26%;
   color: var(--color-secondary);
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
@@ -37,13 +32,13 @@
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   color: var(--color-secondary);
-
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   position: absolute;
   bottom: 38%;
-  right: 50%;
+  right: 26%;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
 }
 
 .link:hover {
