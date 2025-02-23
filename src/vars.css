@@ -1,4 +1,8 @@
 :root {
-    --color-primary: #55290B;
-    --color-secondary: #F2EFEA;
+  --color-primary: #55290b;
+  --color-secondary: #eee9e5;
+  --color-accent1: #ff6a13;
+  --color-accent2: #ff7f50;
+  --font-headings: "Marcellus", "Libre Baskerville", serif;
+  --font-text: "Josefin Sans", "Quattrocento Sans", sans-serif;
 }
