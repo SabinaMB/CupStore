@@ -1,7 +1,9 @@
 .container {
   display: flex;
   height: 100vh;
+  overflow-y: scroll;
   background-color: var(--color-primary);
+  position: relative;
 }
 
 .image {
