@@ -1,7 +1,7 @@
 import "./App.module.css";
 
-import HomePage from "./HomePage/HomePage";
-import ProductsCatalog from "./ProductsCatalog/ProductsCatalog";
+import HomePage from "./components/HomePage/HomePage";
+import ProductsCatalog from "./components/ProductsCatalog/ProductsCatalog";
 
 function App() {
   return (
