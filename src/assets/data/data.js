@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    name: "Black Coffee Cup with Saucer",
+    name: "Black coffee cup with dark golden accents and peony pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup1_iwkm6a.png",
     description:
@@ -11,7 +11,7 @@ const products = [
   },
   {
     id: 2,
-    name: "White Coffee Cup with Vine Leaf Pattern",
+    name: "White coffee cup with vine leaf pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup2_cb4dkf.png",
     description:
@@ -21,7 +21,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Dark Blue Coffee Cup with Vine Leaf Pattern",
+    name: "Dark blue coffee cup with vine leaf pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup3_iu0vpc.png",
     description:
@@ -31,7 +31,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Dark Blue Coffee Cup with Peony Pattern",
+    name: "Dark blue coffee cup with peony pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup4_bqywle.png",
     description:
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: 5,
-    name: "Dark Red Coffee Cup with Golden Accents",
+    name: "Dark red coffee cup with golden accents",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup5_dmd0py.png",
     description:
@@ -51,7 +51,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Light Blue Coffee Cup with Floral Pattern",
+    name: "Light blue coffee cup with floral pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup6_wqfnry.png",
     description:
@@ -61,7 +61,7 @@ const products = [
   },
   {
     id: 7,
-    name: "White Coffee Cup with Golden and Orange Accents",
+    name: "White coffee cup with golden and orange accents",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428291/cup7_t7eevx.png",
     description:
@@ -71,7 +71,7 @@ const products = [
   },
   {
     id: 8,
-    name: "White Coffee Cup with Blue Flower Pattern",
+    name: "White coffee cup with blue flower pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428291/cup8_tm2bxu.png",
     description:
@@ -81,7 +81,7 @@ const products = [
   },
   {
     id: 9,
-    name: "White Coffee Cup with Poppies Pattern",
+    name: "White coffee cup with poppies pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428293/cup9_dx0wai.png",
     description:
@@ -91,7 +91,7 @@ const products = [
   },
   {
     id: 10,
-    name: "White Coffee Cup with Poppies Pattern",
+    name: "White coffee cup with poppies pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428292/cup10_nxgyvb.png",
     description:
@@ -101,7 +101,7 @@ const products = [
   },
   {
     id: 11,
-    name: "Light Pink Coffee Cup with Golden Accents and Poppies Pattern",
+    name: "Light pink coffee cup with golden accents and poppies pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428292/cup11_flki3w.png",
     description:
@@ -111,7 +111,7 @@ const products = [
   },
   {
     id: 12,
-    name: "Light Pink Coffee Cup with Golden Accents and Big Poppies Pattern",
+    name: "Light pink coffee cup with golden accents and big poppies pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428292/cup12_xxdgft.png",
     description:
@@ -119,19 +119,10 @@ const products = [
     category: "Coffee Cup with Saucer",
     price: 20.49,
   },
+
   {
     id: 13,
-    name: "White Coffee Cup with Golden Accents, Pink and Blue Peony Pattern",
-    image:
-      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428292/cup12_xxdgft.png",
-    description:
-      "Elegant white coffee cup with golden accents, featuring a delicate pattern of pink and blue peonies for a graceful touch.",
-    category: "Coffee Cup with Saucer",
-    price: 20.99,
-  },
-  {
-    id: 14,
-    name: "Blue Coffee Cup with Golden Accents and Light Pink Peony Pattern",
+    name: "Blue coffee cup with golden accents and light pink peony pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428292/cup14_sveozn.png",
     description:
@@ -140,8 +131,8 @@ const products = [
     price: 20.49,
   },
   {
-    id: 15,
-    name: "Dark Green Coffee Cup with Pink Peony Pattern",
+    id: 14,
+    name: "Dark green coffee cup with pink peony pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428293/cup15_mxhmyc.png",
     description:
@@ -150,8 +141,8 @@ const products = [
     price: 20.99,
   },
   {
-    id: 16,
-    name: "Dark Green Coffee Cup with Dark Golden Accents and White Peony Pattern",
+    id: 15,
+    name: "Dark green coffee cup with dark golden accents and white peony pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428294/cup16_hzre26.png",
     description:
@@ -160,8 +151,8 @@ const products = [
     price: 22.99,
   },
   {
-    id: 17,
-    name: "Blue Coffee Cup with Light Blue Peony Pattern",
+    id: 16,
+    name: "Blue coffee cup with light blue peony pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428293/cup17_xiovp9.png",
     description:
@@ -169,19 +160,10 @@ const products = [
     category: "Coffee Cup with Saucer",
     price: 18.49,
   },
+
   {
-    id: 18,
-    name: "Dark Blue Coffee Cup with Dark Golden Accents and Light Blue Peony Pattern",
-    image:
-      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428294/cup18_jyiitv.png",
-    description:
-      "Elegant dark blue coffee cup with dark golden accents, beautifully decorated with light blue peonies for a refined look.",
-    category: "Coffee Cup with Saucer",
-    price: 22.49,
-  },
-  {
-    id: 19,
-    name: "White and Gray Coffee Cup with Flowers Pattern",
+    id: 17,
+    name: "White and gray coffee cup with flowers pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428293/cup19_qagtvb.png",
     description:
@@ -190,8 +172,8 @@ const products = [
     price: 23.99,
   },
   {
-    id: 20,
-    name: "Dark Blue Tea Mug with Vine Leaf Pattern",
+    id: 18,
+    name: "Dark blue tea mug with vine leaf pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428294/mug1_euw9d8.png",
     description:
@@ -200,8 +182,8 @@ const products = [
     price: 17.99,
   },
   {
-    id: 21,
-    name: "White Tea Mug with Green Vine Leaf Pattern",
+    id: 19,
+    name: "White tea mug with green vine leaf pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428295/mug2_c44601.png",
     description:
@@ -210,8 +192,8 @@ const products = [
     price: 14.99,
   },
   {
-    id: 22,
-    name: "Dark Blue Mug with Light Blue Vine Leaves Pattern",
+    id: 20,
+    name: "Dark blue mug with light blue vine leaves pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428294/mug1_euw9d8.png",
     description:
@@ -220,8 +202,8 @@ const products = [
     price: 14.99,
   },
   {
-    id: 23,
-    name: "White Mug with Green Vine Leaves Pattern",
+    id: 21,
+    name: "White mug with green vine leaves pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428295/mug2_c44601.png",
     description:
@@ -230,8 +212,8 @@ const products = [
     price: 14.99,
   },
   {
-    id: 24,
-    name: "White Mug with Blue Flower Pattern",
+    id: 22,
+    name: "White mug with blue flower pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428298/mug3_wlxuod.png",
     description:
@@ -240,8 +222,8 @@ const products = [
     price: 14.99,
   },
   {
-    id: 25,
-    name: "White Mug with Peacock Pattern",
+    id: 23,
+    name: "White mug with peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug4_cukkjp.png",
     description:
@@ -250,9 +232,10 @@ const products = [
     price: 22.49,
   },
   {
-    id: 26,
-    name: "Dark Blue Tea Mug with Flowers Pattern",
-    image: "mug5.jpg",
+    id: 24,
+    name: "Dark blue tea mug with flowers pattern",
+    image:
+      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428298/mug5_m1ijrs.png",
     description:
       "Intense dark blue mug adorned with blue flowers pattern, offering an elegant feel.",
     category: "Coffee Mug",
@@ -260,8 +243,8 @@ const products = [
   },
 
   {
-    id: 27,
-    name: "White Mug with Blue Flower Pattern",
+    id: 25,
+    name: "White mug with blue flower pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428298/mug6_nxtwun.png",
     description:
@@ -270,8 +253,8 @@ const products = [
     price: 14.99,
   },
   {
-    id: 28,
-    name: "White Mug with Gray Vine Leaves Pattern",
+    id: 26,
+    name: "White mug with gray vine leaves pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug7_y8g21x.png",
     description:
@@ -279,19 +262,10 @@ const products = [
     category: "Coffee Mug",
     price: 15.49,
   },
+
   {
-    id: 29,
-    name: "Dark Green Tea Mug with Golden Accents",
-    image:
-      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428292/cup12_xxdgft.png",
-    description:
-      "Sophisticated dark green tea mug with golden accents and a white peony pattern for a luxurious feel.",
-    category: "Tea Mug",
-    price: 20.99,
-  },
-  {
-    id: 30,
-    name: "White Mug with Gray Birds Pattern",
+    id: 27,
+    name: "White mug with gray birds pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug9_pei8lt.png",
     description:
@@ -300,8 +274,8 @@ const products = [
     price: 14.99,
   },
   {
-    id: 31,
-    name: "Dark Red-Brown Mug with Gray Birds Pattern",
+    id: 28,
+    name: "Dark red-brown mug with gray birds pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug10_v3r30v.png",
     description:
@@ -310,8 +284,8 @@ const products = [
     price: 15.99,
   },
   {
-    id: 32,
-    name: "Dark Brown-Orange Mug with Birds Pattern",
+    id: 29,
+    name: "Dark brown-orange mug with birds pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug11_cunkry.png",
     description:
@@ -320,8 +294,8 @@ const products = [
     price: 17.49,
   },
   {
-    id: 33,
-    name: "Dark Green Mug with Dark Golden Accents and Peacock Pattern",
+    id: 30,
+    name: "Dark green mug with dark golden accents and peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug12_jnjivs.png",
     description:
@@ -330,8 +304,8 @@ const products = [
     price: 20.99,
   },
   {
-    id: 34,
-    name: "Light Green Mug with Peacock Pattern",
+    id: 31,
+    name: "Light green mug with peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug13_prmhh6.png",
     description:
@@ -340,8 +314,8 @@ const products = [
     price: 17.99,
   },
   {
-    id: 35,
-    name: "Dark Green Mug with Dark Golden Accents and Peacock Pattern",
+    id: 32,
+    name: "Dark green mug with dark golden accents and peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug14_cdyquq.png",
     description:
@@ -350,8 +324,8 @@ const products = [
     price: 20.49,
   },
   {
-    id: 36,
-    name: "Blue Coffee Cup and Tea Mug Set",
+    id: 33,
+    name: "Blue set: coffee cup and tea mug",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428302/set_n5ej1r.png",
     description:
