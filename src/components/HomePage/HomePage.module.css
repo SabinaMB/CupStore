@@ -33,7 +33,7 @@
   text-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
   text-decoration: none;
   position: absolute;
-  bottom: 50%;
+  bottom: 45%;
   right: clamp(20%, 30%, 35%);
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
   white-space: nowrap;
