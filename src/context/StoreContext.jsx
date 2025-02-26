@@ -1,14 +1,14 @@
-import products from "../data/products";
+import products from "../assets/data.js";
 import { createContext, useContext, useState } from "react";
 
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
-const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
 
-const loadItems = () => {
-  setItems(products);
-};
+  const loadItems = () => {
+    setItems(products);
+  };
 
   return (
     <StoreContext.Provider value={{ items, loadItems }}>

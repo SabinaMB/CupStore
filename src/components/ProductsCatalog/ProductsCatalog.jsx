@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./ProductsCatalog.module.css";
-import products from "../../assets/data/data";
 import ProductCard from "../ProductCard/ProductCard";
+import { useStore } from "../../context/StoreContext";
 
 function ProductsCatalog() {
+  const { items, loadItems } = useStore();
+  useEffect(() => {
+    loadItems();
+  }, []);
+
   return (
     <div className={style.container}>
-      {products.map((product) => (
+      {items.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>
