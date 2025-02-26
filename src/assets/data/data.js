@@ -1,13 +1,13 @@
 const products = [
   {
     id: 1,
-    name: "Black coffee cup with dark golden accents and peony pattern",
+    name: "White and gray coffee cup with flowers pattern",
     image:
-      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428290/cup1_iwkm6a.png",
+      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428293/cup19_qagtvb.png",
     description:
-      "Elegant black coffee cup with dark golden accents and a delicate white peony pattern. Perfect for adding sophistication to your coffee moments.",
+      "Minimalist white and gray coffee cup featuring a delicate floral pattern, perfect for a subtle yet charming style.",
     category: "Coffee Cup with Saucer",
-    price: 20.99,
+    price: 23.99,
   },
   {
     id: 2,
@@ -163,16 +163,6 @@ const products = [
 
   {
     id: 17,
-    name: "White and gray coffee cup with flowers pattern",
-    image:
-      "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428293/cup19_qagtvb.png",
-    description:
-      "Minimalist white and gray coffee cup featuring a delicate floral pattern, perfect for a subtle yet charming style.",
-    category: "Coffee Cup with Saucer",
-    price: 23.99,
-  },
-  {
-    id: 18,
     name: "Dark blue tea mug with vine leaf pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428294/mug1_euw9d8.png",
@@ -182,7 +172,7 @@ const products = [
     price: 17.99,
   },
   {
-    id: 19,
+    id: 18,
     name: "White tea mug with green vine leaf pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428295/mug2_c44601.png",
@@ -192,7 +182,7 @@ const products = [
     price: 14.99,
   },
   {
-    id: 20,
+    id: 19,
     name: "Dark blue mug with light blue vine leaves pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428294/mug1_euw9d8.png",
@@ -202,7 +192,7 @@ const products = [
     price: 14.99,
   },
   {
-    id: 21,
+    id: 20,
     name: "White mug with green vine leaves pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428295/mug2_c44601.png",
@@ -212,7 +202,7 @@ const products = [
     price: 14.99,
   },
   {
-    id: 22,
+    id: 21,
     name: "White mug with blue flower pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428298/mug3_wlxuod.png",
@@ -222,7 +212,7 @@ const products = [
     price: 14.99,
   },
   {
-    id: 23,
+    id: 22,
     name: "White mug with peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug4_cukkjp.png",
@@ -232,7 +222,7 @@ const products = [
     price: 22.49,
   },
   {
-    id: 24,
+    id: 23,
     name: "Dark blue tea mug with flowers pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428298/mug5_m1ijrs.png",
@@ -243,7 +233,7 @@ const products = [
   },
 
   {
-    id: 25,
+    id: 24,
     name: "White mug with blue flower pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428298/mug6_nxtwun.png",
@@ -253,7 +243,7 @@ const products = [
     price: 14.99,
   },
   {
-    id: 26,
+    id: 25,
     name: "White mug with gray vine leaves pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug7_y8g21x.png",
@@ -264,7 +254,7 @@ const products = [
   },
 
   {
-    id: 27,
+    id: 26,
     name: "White mug with gray birds pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug9_pei8lt.png",
@@ -274,7 +264,7 @@ const products = [
     price: 14.99,
   },
   {
-    id: 28,
+    id: 27,
     name: "Dark red-brown mug with gray birds pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug10_v3r30v.png",
@@ -284,7 +274,7 @@ const products = [
     price: 15.99,
   },
   {
-    id: 29,
+    id: 28,
     name: "Dark brown-orange mug with birds pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug11_cunkry.png",
@@ -294,7 +284,7 @@ const products = [
     price: 17.49,
   },
   {
-    id: 30,
+    id: 29,
     name: "Dark green mug with dark golden accents and peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug12_jnjivs.png",
@@ -304,7 +294,7 @@ const products = [
     price: 20.99,
   },
   {
-    id: 31,
+    id: 30,
     name: "Light green mug with peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428299/mug13_prmhh6.png",
@@ -314,7 +304,7 @@ const products = [
     price: 17.99,
   },
   {
-    id: 32,
+    id: 31,
     name: "Dark green mug with dark golden accents and peacock pattern",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428300/mug14_cdyquq.png",
@@ -324,7 +314,7 @@ const products = [
     price: 20.49,
   },
   {
-    id: 33,
+    id: 32,
     name: "Blue set: coffee cup and tea mug",
     image:
       "https://res.cloudinary.com/dwsrmg624/image/upload/v1740428302/set_n5ej1r.png",

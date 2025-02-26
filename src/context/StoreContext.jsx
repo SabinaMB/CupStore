@@ -1,4 +1,4 @@
-import products from "../assets/data.js";
+import products from "../assets/data/data.js";
 import { createContext, useContext, useState } from "react";
 
 const StoreContext = createContext();
