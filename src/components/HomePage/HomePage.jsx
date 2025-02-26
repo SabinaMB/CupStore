@@ -6,8 +6,8 @@ function HomePage() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const maxScroll = 400;
-    const newOpacity = 1 - Math.min(scrollPosition / maxScroll, 1);
+    const maxScroll = 800;
+    const newOpacity = 1 - Math.min(scrollPosition / maxScroll, 1000);
     setOpacity(newOpacity);
   };
 
