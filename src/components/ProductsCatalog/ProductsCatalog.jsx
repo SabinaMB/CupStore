@@ -4,14 +4,19 @@ import ProductCard from "../ProductCard/ProductCard";
 import { useStore } from "../../context/StoreContext";
 
 function ProductsCatalog() {
-  const { items, loadItems } = useStore();
+  const { productsInStore, loadProducts } = useStore();
+
   useEffect(() => {
-    loadItems();
+    loadProducts();
   }, []);
+
+  useEffect(() => {
+    console.log(productsInStore);
+  }, [productsInStore]);
 
   return (
     <div className={style.container}>
-      {items.map((product) => (
+      {productsInStore.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>

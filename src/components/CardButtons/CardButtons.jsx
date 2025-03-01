@@ -1,10 +1,18 @@
 import React from "react";
 import style from "./CardButtons.module.css";
+import { useStore } from "../../context/StoreContext";
 
-const CardButtons = () => {
+const CardButtons = ({ product }) => {
+  const { addToCart } = useStore();
   return (
     <div className={style.cardBtns}>
-      <button className={style.addBtn}>Add to Cart</button>
+      <button
+        type="button"
+        className={style.addBtn}
+        onClick={() => addToCart(product)}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };
