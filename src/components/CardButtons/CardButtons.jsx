@@ -9,7 +9,7 @@ const CardButtons = ({ product }) => {
       <button
         type="button"
         className={style.addBtn}
-        onClick={() => addToCart(product)}
+        onClick={() => addToCart(product.id)}
       >
         Add to Cart
       </button>

@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { ShoppingCartIcon, XIcon } from "lucide-react";
 import style from "./ShoppingCart.module.css";
+import { useStore } from "../../context/StoreContext";
+import ProductCard from "../ProductCard/ProductCard";
 
 const ShoppingCart = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { productsInStore, getCartCount, addToCart } = useStore();
+
+  const cartProducts = productsInStore.filter((product) => product.inCart);
+
   return (
     <>
       <button className={style.shoppingCartBtn} onClick={() => setIsOpen(true)}>
         <ShoppingCartIcon className={style.cartIcon} />
-        <span className={style.cartCount}>3</span>
-        {/* {cartItems > 0 && (
-            <span className={style.cartCount}>{cartItems}</span>
-          )} */}
+        <span className={style.cartCount}>{getCartCount()}</span>
       </button>
       <div
         className={`${style.cartWrapper} ${
@@ -28,15 +31,24 @@ const ShoppingCart = () => {
           <span className={style.cartTitle}>Cart</span>
         </div>
         <div className={style.cartContent}>
-          {/* Placeholder for cart items */}
-          {/* {cartItems > 0 ? (
-          <p className={style.cartTotal}>Total: €{totalPrice}</p>
-        ) : (
-          <p className={style.cartEmpty}>Your cart is empty.</p>
-        )} */}
-          <p className={style.cartTotal}>Total: 100 €</p>
-          <button className={style.checkoutBtn}>Buy now</button>
-          <p className={style.cartEmpty}>Your cart is empty.</p>
+          {cartProducts.length > 0 ? (
+            cartProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))
+          ) : (
+            <p className={style.cartEmpty}>Your cart is empty.</p>
+          )}
+        </div>
+        <div className={style.cartFooter}>
+          <p className={style.cartTotal}>
+            Total: {cartProducts.reduce((total, p) => total + p.price, 0)} €
+          </p>
+          <button
+            className={style.checkoutBtn}
+            disabled={cartProducts.length === 0}
+          >
+            Buy now
+          </button>
         </div>
       </div>
     </>
