@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import style from "./ProductsCatalog.module.css";
 import ProductCard from "../ProductCard/ProductCard";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import { useStore } from "../../context/StoreContext";
 
 function ProductsCatalog() {
@@ -16,6 +17,7 @@ function ProductsCatalog() {
 
   return (
     <div className={style.container}>
+      <ShoppingCart />
       {productsInStore.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
