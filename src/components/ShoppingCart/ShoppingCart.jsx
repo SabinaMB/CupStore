@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ShoppingCartIcon, XIcon } from "lucide-react";
+import { ShoppingCartIcon, XIcon, Trash2 } from "lucide-react";
 import style from "./ShoppingCart.module.css";
 import { useStore } from "../../context/StoreContext";
 import ProductCard from "../ProductCard/ProductCard";
@@ -55,28 +55,31 @@ const ShoppingCart = () => {
           {cartProducts.length > 0 ? (
             cartProducts.map((product) => (
               <div key={product.id} className={style.cartProduct}>
-                <ProductCard product={product} view="cart" />
-                <div className={style.cartControls}>
-                  <button
-                    className={style.cartControlBtn}
-                    onClick={() => handleDecreaseQuantity(product.id)}
-                  >
-                    -
-                  </button>
-                  <span className={style.cartQuantity}>{product.quantity}</span>
-                  <button
-                    className={style.cartControlBtn}
-                    onClick={() => handleIncreaseQuantity(product.id)}
-                  >
-                    +
-                  </button>
-                  <button
-                    className={style.removeBtn}
-                    onClick={() => handleRemoveFromCart(product.id)}
-                  >
-                    Remove
-                  </button>
-                </div>
+                <ProductCard product={product} view="cart">
+                  <div className={style.cartControls}>
+                    <button
+                      className={style.cartControlBtn}
+                      onClick={() => handleDecreaseQuantity(product.id)}
+                    >
+                      -
+                    </button>
+                    <span className={style.cartQuantity}>
+                      {product.quantity}
+                    </span>
+                    <button
+                      className={style.cartControlBtn}
+                      onClick={() => handleIncreaseQuantity(product.id)}
+                    >
+                      +
+                    </button>
+                    <button className={style.removeBtn}>
+                      <Trash2
+                        className={style.removeIcon}
+                        onClick={() => handleRemoveFromCart(product.id)}
+                      />
+                    </button>
+                  </div>
+                </ProductCard>
               </div>
             ))
           ) : (

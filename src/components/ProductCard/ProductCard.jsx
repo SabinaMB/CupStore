@@ -2,7 +2,7 @@ import React from "react";
 import style from "./ProductCard.module.css";
 import CardButtons from "../CardButtons/CardButtons";
 
-const ProductCard = ({ product, view }) => {
+const ProductCard = ({ product, view, children }) => {
   const { image, name, price } = product;
   return (
     <div className={style.productCard}>
@@ -20,6 +20,7 @@ const ProductCard = ({ product, view }) => {
         <img src={image} alt={name} />
         <h3>{name}</h3>
         <p>{price} €</p>
+        {view === "cart" && children}
       </div>
     </div>
   );
