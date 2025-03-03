@@ -156,6 +156,7 @@
   font-family: var(--font-text);
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .checkoutBtn:hover {

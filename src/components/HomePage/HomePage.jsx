@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./HomePage.module.css";
+import style from "./HomePage.module.css";
 
 function HomePage() {
   const [opacity, setOpacity] = useState(1);
@@ -20,11 +20,11 @@ function HomePage() {
   }, []);
 
   return (
-    <div className={styles.container} style={{ opacity }}>
-      <img className={styles.image} src="/landingPage.png" alt="landing page" />
+    <div className={style.container} style={{ opacity }}>
+      <img className={style.image} src="/landingPage.png" alt="landing page" />
 
-      <h1 className={styles.motto}>A cup as unique as your taste</h1>
-      <p className={styles.link}>Discover more</p>
+      <h1 className={style.motto}>A cup as unique as your taste</h1>
+      <p className={style.link}>Discover more</p>
     </div>
   );
 }
