@@ -38,3 +38,10 @@ p {
   font-family: var(--font-text);
   color: var(--color-primary);
 }
+
+.inCartText {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -15,50 +15,54 @@ export const StoreProvider = ({ children }) => {
       }));
       setProductsInStore(initialProducts);
     }
-  }, []);
+  }, [productsInStore]);
 
   const addToCart = (productId) => {
     setProductsInStore((prevProducts) =>
-      prevProducts.map((product) => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            inCart: true,
-            quantity: product.quantity + 1,
-          };
-        }
-        return product;
-      })
+      prevProducts.map((product) =>
+        product.id === productId
+          ? {
+              ...product,
+              inCart: true,
+              quantity: product.quantity + 1,
+            }
+          : product
+      )
     );
   };
 
   const removeFromCart = (productId) => {
     setProductsInStore((prevProducts) =>
-      prevProducts.map((product) => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            inCart: false,
-            quantity: 0,
-          };
-        }
-        return product;
-      })
+      prevProducts.map((product) =>
+        product.id === productId
+          ? {
+              ...product,
+              inCart: false,
+              quantity: 0,
+            }
+          : product
+      )
     );
   };
 
-  const updateQuantity = (productId, newQuantity) => {
+  const updateQuantity = (productId, increment) => {
     setProductsInStore((prevProducts) =>
       prevProducts.map((product) =>
         product.id === productId
-          ? { ...product, quantity: newQuantity, inCart: newQuantity > 0 }
+          ? {
+              ...product,
+              quantity: Math.max(0, product.quantity + increment),
+              inCart: product.quantity + increment > 0,
+            }
           : product
       )
     );
   };
 
   const getCartProducts = () => {
-    return productsInStore.filter((product) => product.inCart);
+    const cartProducts = productsInStore.filter((product) => product.inCart);
+    console.log("Products in cart:", cartProducts);
+    return cartProducts;
   };
 
   const getCartCount = () => {
