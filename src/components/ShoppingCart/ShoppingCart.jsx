@@ -90,10 +90,9 @@ const ShoppingCart = () => {
           {cartProducts.length > 0 && (
             <p className={style.cartTotal}>
               Total:{" "}
-              {cartProducts.reduce(
-                (total, p) => total + p.price * p.quantity,
-                0
-              )}{" "}
+              {cartProducts
+                .reduce((total, p) => total + p.price * p.quantity, 0)
+                .toFixed(2)}{" "}
               €
             </p>
           )}

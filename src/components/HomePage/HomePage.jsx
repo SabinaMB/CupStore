@@ -24,7 +24,7 @@ function HomePage() {
       <img className={style.image} src="/landingPage.png" alt="landing page" />
 
       <h1 className={style.motto}>A cup as unique as your taste</h1>
-      <p className={style.link}>Discover more</p>
+      {/* <p className={style.link}>Discover more</p> */}
     </div>
   );
 }
