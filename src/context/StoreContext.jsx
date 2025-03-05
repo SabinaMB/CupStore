@@ -1,10 +1,6 @@
 import { useEffect, useState, createContext, useContext } from "react";
 import products from "../assets/data/data.js";
-import {
-  getItemFromStorage,
-  getParsedItemFromStorage,
-  setItemInStorage,
-} from "../localStorage";
+import { getParsedItemFromStorage, setItemInStorage } from "../localStorage";
 
 const StoreContext = createContext();
 
@@ -13,9 +9,19 @@ export const StoreProvider = ({ children }) => {
 
   useEffect(() => {
     const savedCart = getParsedItemFromStorage("cart");
+    console.log("Loaded cart from storage:", savedCart);
 
-    if (savedCart && savedCart.length > 0) {
-      setProductsInStore(savedCart);
+    if (savedCart && Array.isArray(savedCart)) {
+      const validatedCart = savedCart
+        .map((product) => ({
+          ...product,
+          price: parseFloat(product.price) || 0,
+          quantity: parseInt(product.quantity) || 0,
+          inCart: product.quantity > 0,
+        }))
+        .filter((product) => product.price >= 0 && product.quantity >= 0);
+
+      setProductsInStore(validatedCart.length > 0 ? validatedCart : products);
     } else {
       const initialProducts = products.map((product) => ({
         ...product,
@@ -76,7 +82,6 @@ export const StoreProvider = ({ children }) => {
 
   const getCartProducts = () => {
     const cartProducts = productsInStore.filter((product) => product.inCart);
-    console.log("Products in cart:", cartProducts);
     return cartProducts;
   };
 
@@ -89,8 +94,16 @@ export const StoreProvider = ({ children }) => {
 
   const getCartTotal = () => {
     const total = productsInStore.reduce((total, product) => {
-      return total + product.price * product.quantity;
+      const price = parseFloat(product.price) || 0;
+      const quantity = parseInt(product.quantity) || 0;
+
+      // Only add to total if both price and quantity are valid
+      if (price >= 0 && quantity > 0) {
+        return total + price * quantity;
+      }
+      return total;
     }, 0);
+
     return parseFloat(total.toFixed(2));
   };
 
@@ -102,6 +115,7 @@ export const StoreProvider = ({ children }) => {
         quantity: 0,
       }))
     );
+    setItemInStorage("cart", []);
   };
 
   const setLocalStorage = () => {
