@@ -1,19 +1,46 @@
 import { useEffect, useState, createContext, useContext } from "react";
 import products from "../assets/data/data.js";
+import {
+  getItemFromStorage,
+  getParsedItemFromStorage,
+  setItemInStorage,
+} from "../localStorage";
 
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
   const [productsInStore, setProductsInStore] = useState([]);
 
+  // useEffect(() => {
+  //   if (productsInStore.length === 0) {
+  //     const initialProducts = products.map((product) => ({
+  //       ...product,
+  //       inCart: false,
+  //       quantity: 0,
+  //     }));
+  //     setProductsInStore(initialProducts);
+  //   }
+  // }, [productsInStore]);
+
   useEffect(() => {
-    if (productsInStore.length === 0) {
+    const savedCart = getParsedItemFromStorage("cart");
+
+    if (savedCart && savedCart.length > 0) {
+      setProductsInStore(savedCart);
+    } else {
       const initialProducts = products.map((product) => ({
         ...product,
         inCart: false,
         quantity: 0,
       }));
       setProductsInStore(initialProducts);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save cart to localStorage whenever it changes
+    if (productsInStore.length > 0) {
+      setItemInStorage("cart", productsInStore);
     }
   }, [productsInStore]);
 
@@ -78,6 +105,13 @@ export const StoreProvider = ({ children }) => {
     }, 0);
   };
 
+  const setLocalStorage = () => {
+    if (productsInStore.length !== 0) {
+      const inCartItems = productsInStore.filter((item) => item.inCart);
+      setItemInStorage("cart", inCartItems);
+    }
+  };
+
   return (
     <StoreContext.Provider
       value={{
@@ -88,6 +122,7 @@ export const StoreProvider = ({ children }) => {
         getCartProducts,
         getCartCount,
         getCartTotal,
+        setLocalStorage,
       }}
     >
       {children}
