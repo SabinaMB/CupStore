@@ -5,7 +5,7 @@ export const getItemFromStorage = (name) => localStorage?.getItem(name);
 
 export const getParsedItemFromStorage = (name) => {
   const item = localStorage?.getItem(name);
-  return item ? JSON.parse(item) : []; // Return an empty array if no data is found
+  return item ? JSON.parse(item) : [];
 };
 
 export const removeItemFromStorage = (name) => localStorage?.removeItem(name);

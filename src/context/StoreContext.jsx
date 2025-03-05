@@ -11,17 +11,6 @@ const StoreContext = createContext();
 export const StoreProvider = ({ children }) => {
   const [productsInStore, setProductsInStore] = useState([]);
 
-  // useEffect(() => {
-  //   if (productsInStore.length === 0) {
-  //     const initialProducts = products.map((product) => ({
-  //       ...product,
-  //       inCart: false,
-  //       quantity: 0,
-  //     }));
-  //     setProductsInStore(initialProducts);
-  //   }
-  // }, [productsInStore]);
-
   useEffect(() => {
     const savedCart = getParsedItemFromStorage("cart");
 
@@ -38,7 +27,6 @@ export const StoreProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    // Save cart to localStorage whenever it changes
     if (productsInStore.length > 0) {
       setItemInStorage("cart", productsInStore);
     }
@@ -100,9 +88,20 @@ export const StoreProvider = ({ children }) => {
   };
 
   const getCartTotal = () => {
-    return productsInStore.reduce((total, product) => {
+    const total = productsInStore.reduce((total, product) => {
       return total + product.price * product.quantity;
     }, 0);
+    return parseFloat(total.toFixed(2));
+  };
+
+  const clearCart = () => {
+    setProductsInStore((prevProducts) =>
+      prevProducts.map((product) => ({
+        ...product,
+        inCart: false,
+        quantity: 0,
+      }))
+    );
   };
 
   const setLocalStorage = () => {
@@ -122,6 +121,7 @@ export const StoreProvider = ({ children }) => {
         getCartProducts,
         getCartCount,
         getCartTotal,
+        clearCart,
         setLocalStorage,
       }}
     >
