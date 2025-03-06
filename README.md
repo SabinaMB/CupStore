@@ -21,5 +21,6 @@ CupStore is a stylish web application for browsing and purchasing coffee and tea
 - **Image Hosting:** Cloudinary
 - **Styling:** CSS Modules
 
+## Live Application
 
-
+https://cup-store.netlify.app/
