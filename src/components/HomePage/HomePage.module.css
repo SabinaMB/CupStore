@@ -35,6 +35,20 @@
   .motto {
     right: clamp(5%, 10%, 15%);
   }
+
+  .image {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .motto {
+    right: clamp(1%, 3%, 8%);
+  }
+
+  .image {
+    width: 80%;
+  }
 }
 
 @media (max-width: 430px) {
@@ -43,10 +57,7 @@
   }
 
   .image {
-    height: 100vh;
-    width: 70%;
-    object-fit: cover;
-    object-position: right;
+    width: 100%;
   }
 
   .motto {
