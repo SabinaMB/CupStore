@@ -8,31 +8,6 @@ export const StoreProvider = ({ children }) => {
   const [productsInStore, setProductsInStore] = useState([]);
   const [isCartLoaded, setIsCartLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   const savedCart = getParsedItemFromStorage("cart");
-  //   console.log("Loaded cart from storage:", savedCart);
-
-  //   if (savedCart && Array.isArray(savedCart)) {
-  //     const validatedCart = savedCart
-  //       .map((product) => ({
-  //         ...product,
-  //         price: parseFloat(product.price) || 0,
-  //         quantity: parseInt(product.quantity) || 0,
-  //         inCart: product.quantity > 0,
-  //       }))
-  //       .filter((product) => product.price >= 0 && product.quantity >= 0);
-
-  //     setProductsInStore(validatedCart.length > 0 ? validatedCart : products);
-  //   } else {
-  //     const initialProducts = products.map((product) => ({
-  //       ...product,
-  //       inCart: false,
-  //       quantity: 0,
-  //     }));
-  //     setProductsInStore(initialProducts);
-  //   }
-  // }, []);
-
   useEffect(() => {
     if (isCartLoaded) return;
     const savedCart = getParsedItemFromStorage("cart");
@@ -50,7 +25,6 @@ export const StoreProvider = ({ children }) => {
 
       setProductsInStore(validatedCart);
     } else {
-      // Initialize with default products if no saved cart data is found
       const initialProducts = products.map((product) => ({
         ...product,
         inCart: false,
@@ -58,7 +32,7 @@ export const StoreProvider = ({ children }) => {
       }));
       setProductsInStore(initialProducts);
     }
-    setIsCartLoaded(true); // Mark cart as loaded after reading from storage
+    setIsCartLoaded(true);
   }, [isCartLoaded]);
 
   useEffect(() => {
@@ -114,13 +88,6 @@ export const StoreProvider = ({ children }) => {
     return cartProducts;
   };
 
-  // const getCartCount = () => {
-  //   return productsInStore.reduce(
-  //     (count, product) => count + (product.quantity || 0),
-  //     0
-  //   );
-  // };
-
   const getCartCount = () => {
     return productsInStore && productsInStore.length > 0
       ? productsInStore.reduce(
@@ -129,20 +96,6 @@ export const StoreProvider = ({ children }) => {
         )
       : 0;
   };
-
-  // const getCartTotal = () => {
-  //   const total = productsInStore.reduce((total, product) => {
-  //     const price = parseFloat(product.price) || 0;
-  //     const quantity = parseInt(product.quantity) || 0;
-
-  //     if (price >= 0 && quantity > 0) {
-  //       return total + price * quantity;
-  //     }
-  //     return total;
-  //   }, 0);
-
-  //   return parseFloat(total.toFixed(2));
-  // };
 
   const getCartTotal = () => {
     const total =
