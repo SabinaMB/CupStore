@@ -50,7 +50,7 @@ const ShoppingCart = () => {
     <>
       <button className={style.shoppingCartBtn} onClick={() => setIsOpen(true)}>
         <ShoppingCartIcon className={style.cartIcon} />
-        <span className={style.cartCount}>{getCartCount()}</span>
+        <span className={style.cartCount}>{getCartCount() || 0}</span>
       </button>
       <div
         className={`${style.cartWrapper} ${
@@ -79,7 +79,7 @@ const ShoppingCart = () => {
                       -
                     </button>
                     <span className={style.cartQuantity}>
-                      {product.quantity}
+                      {product.quantity || 0}
                     </span>
                     <button
                       className={style.cartControlBtn}
@@ -104,7 +104,7 @@ const ShoppingCart = () => {
         <div className={style.cartFooter}>
           {cartProducts.length > 0 && (
             <>
-              <p className={style.cartTotal}>Total: {getCartTotal()} €</p>
+              <p className={style.cartTotal}>Total: {getCartTotal() || 0} €</p>
               <div className={style.cartButtonWrapper}>
                 <button
                   className={style.clearCartBtn}

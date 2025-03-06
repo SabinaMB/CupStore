@@ -87,7 +87,7 @@ export const StoreProvider = ({ children }) => {
 
   const getCartCount = () => {
     return productsInStore.reduce(
-      (count, product) => count + product.quantity,
+      (count, product) => count + (product.quantity || 0),
       0
     );
   };
@@ -97,7 +97,6 @@ export const StoreProvider = ({ children }) => {
       const price = parseFloat(product.price) || 0;
       const quantity = parseInt(product.quantity) || 0;
 
-      // Only add to total if both price and quantity are valid
       if (price >= 0 && quantity > 0) {
         return total + price * quantity;
       }
